@@ -89,7 +89,7 @@
 		<p class="note">関連するリストは<a href="https://github.com/iojs/roadmap">ロードマップ</a>プロジェクトにあります。コントリビュート歓迎です。</p>
 	</div></section>
 
-	<section class="slide"><div style="padding-top:50px;">
+	<section class="slide" id='stability-policy'><div style="padding-top:50px;">
 		<!--
 		<h2>Stability Policy</h2>
 		<blockquote>
@@ -115,14 +115,19 @@
 			<li><a href="http://semver.org">セマンティックバージョニング</a>
 				<ul>
 					<li>API の追加は<em>マイナー</em>バージョンがインクリメントされることを意味します。</li>
-					<li>V8 の C++ API の変更は nan によってハンドリングされます。そのため、<a href="https://github.com/rvagg/nan"><code>nan</code></a> が変更を吸収できない場合は minor か major のバージョンが上がることになります。</li>
+					<li>V8 の C++ API の変更は <a href="https://github.com/rvagg/nan"><code>nan</code></a> によってハンドリングされます。そのため、nan が変更を吸収できない場合は minor か major のバージョンが上がることになります。</li>
 				</ul>
 			</li>
 		</ul>
 			<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">安定性ポリシー</a>のロードマップより抜粋。コントリビュート歓迎です！</p>
+		<style>
+			#stability-policy {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='channels'><div>
 		<!--
 		<h2>Channels</h2>
 		<table>
@@ -161,9 +166,14 @@
 		<br>
 		<br>
 		<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">安定性ポリシー</a>のロードマップより抜粋。コントリビュート歓迎です！</p>
+		<style>
+			#channels {
+				font-size: 0.9em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='ng'><div>
 		<!--
 		<h2>NG (Next Generation)</h2>
 
@@ -186,9 +196,14 @@
 		</ul>
 		<br>
 		<p class="note">NG の議論は<a href="https://github.com/iojs/ng">NG repo</a>で現在も進行中です。</p>
+		<style>
+			#ng {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='debugging-and-tracing'><div>
 		<!--
 		<h2>Debugging & Tracing</h2>
 		<blockquote>
@@ -211,9 +226,14 @@
 			<li>システムのトレーシングエンドポイントを統一します (DTrace, LTTngなど)</li>
 		</ul>
 		<p class="note">作業は <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a> に先導されています。コントリビュート歓迎です！</p>
+		<style>
+			#debugging-and-tracing {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='streams'><div>
 		<!--
 		<h2>Streams</h2>
 		<ul>
@@ -234,6 +254,11 @@
 			<li>ストリームのパフォーマンスを向上させる。</li>
 		</ul>
 		<p class="note">作業は<a href="https://github.com/iojs/readable-stream">Streams Working Group</a> に先導されています。コントリビュート歓迎です！</p>
+		<style>
+			#streams {
+				font-size: 0.9em;
+			}
+		</style>
 	</div></section>
 
 	<section class="slide"><div>
@@ -259,7 +284,7 @@
 		<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a> の要約です。コントリビュート歓迎です！</p>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='localization'><div>
 		<!--
 		<h2>Localization</h2>
 
@@ -286,6 +311,11 @@
 				</ul>
 		</ul>
 		<p class="note"><a href="https://github.com/iojs/website/issues/125">あなたの言語のコミュニティに</a>あなたも参加することができます :)</p>
+		<style>
+			#localization {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
 	<section class="slide"><div>
