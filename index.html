@@ -1,7 +1,10 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="ja">
 <head>
+	<!--
 	<title>io.js Roadmap</title>
+	-->
+	<title>io.js ロードマップ</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=792, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,12 +12,20 @@
 </head>
 <body class="list">
 	<header class="caption">
+		<!--
 		<h1>io.js Roadmap</h1>
 		<p>Living Document: Last edited on February 26th, 2015.</p>
+		-->
+		<h1>io.js ロードマップ</h1>
+		<p>リビングドキュメント: 最終更新日 2015/02/26</p>
 	</header>
 	<section class="slide cover" id="Cover"><div>
+		<!--
 		<h2>The Bright Future of io.js</h2>
 		<p>A Community Driven Roadmap</p>
+		-->
+		<h2>io.js の明るい未来</h2>
+		<p>コミュニティドリブンなロードマップ</p>
 		<img src="pictures/cover.jpg" alt="">
 		<!--
 			To apply styles to the certain slides
@@ -41,14 +52,20 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<!--
 		<h2>For the community, by the community</h2>
 		<p><strong>io.js</strong> is a drop-in replacement for node.js and is compatible with nearly all the modules in <strong>npm</strong>.
 		</p>
 		<p><strong>io.js</strong> is a community driven open source project. It was started by the primary contributors to node.js but has already attracted more active developers than the node.js project has had in its entire history.</p>
+		-->
+		<h2>コミュニティによる、コミュニティのための</h2>
+		<p><strong>io.js</strong> は Node.js と完全互換で <strong>npm</strong> のほぼ全てのモジュールと互換性があります。</p>
+		<p><strong>io.js</strong> はコミュニティドリブンのオープンソースプロジェクトです。io.js は Node.js の主要なコントリビュータによって開始されましたが、既に多くの積極的な開発者を集めており、これは Node.js の歴史の中で最も多くなっています。</p>
 
 	</div></section>
 
 	<section class="slide"><div>
+		<!--
 		<h2>What do people want from io.js?</h2>
 		<ol>
 			<li>Stability</li>
@@ -59,9 +76,21 @@
 			<li>Localization</li>
 		</ol>
 		<p class="note">Concerns list compiled from the <a href="https://github.com/iojs/roadmap">roadmap</a> project. Contributors welcome!</p>
+		-->
+		<h2>io.js に求められているものとは？</h2>
+		<ol>
+			<li>安定性</li>
+			<li>透明性 (デバッグとトレーシング)</li>
+			<li>より良いストリーム</li>
+			<li>長期サポート</li>
+			<li>継続的に標準を受け入れる</li>
+			<li>ローカライズ</li>
+		</ol>
+		<p class="note">関連するリストは<a href="https://github.com/iojs/roadmap">ロードマップ</a>プロジェクトにあります。コントリビュート歓迎です。</p>
 	</div></section>
 
-	<section class="slide"><div style="padding-top:50px;">
+	<section class="slide" id='stability-policy'><div style="padding-top:50px;">
+		<!--
 		<h2>Stability Policy</h2>
 		<blockquote>
 			<p>We have the largest package ecosystem of any language, we can't break it.</p>
@@ -76,9 +105,30 @@
 			</li>
 		</ul>
 			<p class="note">From the <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a> section of the Roadmap. Contributors welcome!</p>
+		-->
+		<h2>安定性ポリシー</h2>
+		<blockquote>
+			<p>私たちは他のどの言語よりも大きなパッケージエコシステムを持っており、我々はそれを壊すことはできません。</p>
+		</blockquote>
+		<ul>
+			<li>私たちは JS API を削除しません</li>
+			<li><a href="http://semver.org">セマンティックバージョニング</a>
+				<ul>
+					<li>API の追加は<em>マイナー</em>バージョンがインクリメントされることを意味します。</li>
+					<li>V8 の C++ API の変更は <a href="https://github.com/rvagg/nan"><code>nan</code></a> によってハンドリングされます。そのため、nan が変更を吸収できない場合は minor か major のバージョンが上がることになります。</li>
+				</ul>
+			</li>
+		</ul>
+			<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">安定性ポリシー</a>のロードマップより抜粋。コントリビュート歓迎です！</p>
+		<style>
+			#stability-policy {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='channels'><div>
+		<!--
 		<h2>Channels</h2>
 		<table>
 		<tr>
@@ -97,9 +147,34 @@
 		<br>
 		<br>
 		<p class="note">From the <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Roadmap</a>. Contributors welcome!</p>
+		-->
+		<h2>チャンネル</h2>
+		<table>
+		<tr>
+			<th scope="row">Release</th>
+			<td>全てのバージョンがビルドされています。<br> <strong>安定しており、プロダクションで使えます</strong>。</td>
+		</tr>
+		<tr>
+			<th scope="row">Canary</th>
+			<td>V8やその他の新機能が使える、毎晩ビルドされるバージョンです。</td>
+		</tr>
+		<tr>
+			<th scope="row">NG</th>
+			<td>次世代の ES6/7 の中心的な APIが使えます。</td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">安定性ポリシー</a>のロードマップより抜粋。コントリビュート歓迎です！</p>
+		<style>
+			#channels {
+				font-size: 0.9em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='ng'><div>
+		<!--
 		<h2>NG (Next Generation)</h2>
 
 		<ul>
@@ -110,9 +185,26 @@
 		</ul>
 		<br>
 		<p class="note">NG discussions are ongoing in the <a href="https://github.com/iojs/ng">NG repo</a>.</p>
+		-->
+		<h2>NG (ネクストジェネレーション)</h2>
+
+		<ul>
+			<li>モダンな JavaScript アプリケーションのための新しいプラットフォームを目指します。</li>
+			<li>今後も下位互換性は残す予定です。</li>
+			<li>新しい API は古いモジュールと API を壊すことなく ES6/7 を中心に据えることができます。</li>
+			<li>現在のプラットフォームへの改善から今後の API のための作業への区切りとします。</li>
+		</ul>
+		<br>
+		<p class="note">NG の議論は<a href="https://github.com/iojs/ng">NG repo</a>で現在も進行中です。</p>
+		<style>
+			#ng {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='debugging-and-tracing'><div>
+		<!--
 		<h2>Debugging & Tracing</h2>
 		<blockquote>
 			<p>Core should enable a massive and diverse ecosystem of debugging and tracing tools rather than endorse high level abstractions like <code>domains</code>.</p>
@@ -123,9 +215,26 @@
 			<li>Unify system tracing endpoint (DTrace, LTTng, etc)</li>
 		</ul>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a>. Contributors welcome!</p>
+		-->
+		<h2>デバッグとトレーシング</h2>
+		<blockquote>
+			<p>コアは <code>domains</code> のような高レベルの抽象化を目指すよりもむしろデバッグやトレースツールのような様々なエコシステムを利用可能にする必要があります。</p>
+		</blockquote>
+		<ul>
+			<li><code>trace_event</code> との統合 (V8 と Chrome のための新しいトレース API )。</li>
+			<li>デバッグのエコシステムをドキュメント化し普及させます。</li>
+			<li>システムのトレーシングエンドポイントを統一します (DTrace, LTTngなど)</li>
+		</ul>
+		<p class="note">作業は <a href="https://github.com/iojs/tracing-wg">Tracing Working Group</a> に先導されています。コントリビュート歓迎です！</p>
+		<style>
+			#debugging-and-tracing {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='streams'><div>
+		<!--
 		<h2>Streams</h2>
 		<ul>
 			<li><strong>Streams Working Group</strong> has taken over <code>readable-stream</code>, which is now the official io.js <code>stream</code> module.
@@ -135,9 +244,25 @@
 			<li>Improve stream performance.</li>
 		</ul>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Contributors welcome!</p>
+		-->
+		<h2>Stream</h2>
+		<ul>
+			<li><strong>ストリームワーキンググループ</strong>は <code>readable-stream</code> を引き継ぎ、これを io.js 公式の <code>stream</code> モジュールとしました。</li>
+			<li>全ての既存の互換性の問題を修正しました。</li>
+      <li>ユーザエラーを回避するためにストリームの作成を簡素化します。</li>
+			<li><a href="https://github.com/whatwg/streams">WHATWG Streams</a>を追求してインターフェースと互換性の問題を明確にする。</li>
+			<li>ストリームのパフォーマンスを向上させる。</li>
+		</ul>
+		<p class="note">作業は<a href="https://github.com/iojs/readable-stream">Streams Working Group</a> に先導されています。コントリビュート歓迎です！</p>
+		<style>
+			#streams {
+				font-size: 0.9em;
+			}
+		</style>
 	</div></section>
 
 	<section class="slide"><div>
+		<!--
 		<h2>Long Term Support</h2>
 
 		<ul>
@@ -147,9 +272,20 @@
 		</ul>
 		<br>
 		<p class="note">Summary from <a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a>. Contributors welcome!</p>
+		-->
+		<h2>長期サポート</h2>
+
+		<ul>
+			<li>新しいリリースラインは安定性と依存性のサポートと共にリリースされます。</li>
+			<li>古いバージョンへのパッチリリースは人々が積極的にコントリビュートしているようにするために公開されます。</li>
+			<li>io.js は古いバージョンの依存関係について、V8 のように以前のリリースについてメンテナがサポートを停止する際に責任をとります。</li>
+		</ul>
+		<br>
+		<p class="note"><a href="https://github.com/iojs/io.js/blob/v1.x/ROADMAP.md">Stability Policy</a> の要約です。コントリビュート歓迎です！</p>
 	</div></section>
 
-	<section class="slide"><div>
+	<section class="slide" id='localization'><div>
+		<!--
 		<h2>Localization</h2>
 
 		<ul>
@@ -162,9 +298,28 @@
 				</ul>
 		</ul>
 		<p class="note">You can get involved by <a href="https://github.com/iojs/website/issues/125">joining the community for your language</a> :)</p>
+		-->
+		<h2>ローカライズ</h2>
+
+		<ul>
+			<li><code>icu</code> を含めた時の影響を軽減。(バイナリとメモリフットプリント)</li>
+			<li>活気のあるローカライゼーションコミュニティを育成する。</li>
+				<ul>
+					<li>各言語のコミュニティは自律的です。(30以上がこれまでに登録されています)</li>
+					<li>メンバーシップを成長させる普及の取り組んでいます。(160人以上が取り組んでいます)</li>
+					<li>翻訳ウェブサイト、API ドキュメント、インストーラやスライドの資料などの道具を向上させます。</li>
+				</ul>
+		</ul>
+		<p class="note"><a href="https://github.com/iojs/website/issues/125">あなたの言語のコミュニティに</a>あなたも参加することができます :)</p>
+		<style>
+			#localization {
+				font-size: 0.8em;
+			}
+		</style>
 	</div></section>
 
 	<section class="slide"><div>
+		<!--
 		<h2>Get Involved!</h2>
 
 		<table>
@@ -191,6 +346,35 @@
 			<td>ICU</td>
 			<td><a href="https://github.com/iojs/io.js/issues/695">doc tooling</a></td>
 			<td><a href="https://github.com/iojs/website/issues/125">join a language<br>community</a></td>
+		</tr>
+		</table>
+		-->
+		<h2>一翼を担おう！</h2>
+
+		<table>
+		<tr>
+			<th></th>
+			<th scope="column">コア</th>
+			<th scope="column">エコシステム</th>
+			<th scope="column">コミュニティ</th>
+		</tr>
+		<tr>
+			<th>コード</th>
+			<td><a href="https://github.com/iojs/io.js">iojs/io.js</a></a></td>
+			<td><a href="https://github.com/rvagg/nan">rvagg/nan</a></td>
+			<td><a href="https://github.com/iojs/website">iojs/website</a></td>
+		</tr>
+		<tr>
+			<th>普及</th>
+			<td><a href="https://github.com/iojs/roadmap">Roadmap</a></td>
+			<td><a href="http://nodeschool.io/">NodeSchool</a></td>
+			<td><a href="https://github.com/iojs/evangelism">iojs Evangelism WG</a></td>
+		</tr>
+		<tr>
+			<th>i18n</th>
+			<td>ICU</td>
+			<td><a href="https://github.com/iojs/io.js/issues/695">ドキュメントツール</a></td>
+			<td><a href="https://github.com/iojs/website/issues/125">言語コミュニティに参加</a></td>
 		</tr>
 		</table>
 
