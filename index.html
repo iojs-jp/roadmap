@@ -58,7 +58,7 @@
 		</p>
 		<p><strong>io.js</strong> is a community driven open source project. It was started by the primary contributors to node.js but has already attracted more active developers than the node.js project has had in its entire history.</p>
 		-->
-		<h2>コミュニティのためのコミュニティ</h2>
+		<h2>コミュニティによる、コミュニティのための</h2>
 		<p><strong>io.js</strong> は Node.js と完全互換で <strong>npm</strong> のほぼ全てのモジュールと互換性があります。</p>
 		<p><strong>io.js</strong> はコミュニティドリブンのオープンソースプロジェクトです。io.js は Node.js の主要なコントリビュータによって開始されましたが、既に多くの積極的な開発者を集めており、これは Node.js の歴史の中で最も多くなっています。</p>
 
@@ -77,7 +77,7 @@
 		</ol>
 		<p class="note">Concerns list compiled from the <a href="https://github.com/iojs/roadmap">roadmap</a> project. Contributors welcome!</p>
 		-->
-		<h2>人々は io.js に何を求めているのか？</h2>
+		<h2>io.js に求められているものとは？</h2>
 		<ol>
 			<li>安定性</li>
 			<li>透明性 (デバッグとトレーシング)</li>
@@ -115,7 +115,7 @@
 			<li><a href="http://semver.org">セマンティックバージョニング</a>
 				<ul>
 					<li>API の追加は<em>マイナー</em>バージョンがインクリメントされることを意味します。</li>
-					<li><a href="https://github.com/rvagg/nan"><code>nan</code></a> によって V8 の C++ API を処理しているので<em>マイナー</em>バージョンがインクリメントされ、<em>メジャー</em>バージョンがインクリメントされることはありません。</li>
+					<li>V8 の C++ API の変更は nan によってハンドリングされます。そのため、<a href="https://github.com/rvagg/nan"><code>nan</code></a> が変更を吸収できない場合は minor か major のバージョンが上がることになります。</li>
 				</ul>
 			</li>
 		</ul>
@@ -146,11 +146,11 @@
 		<h2>チャンネル</h2>
 		<table>
 		<tr>
-			<th scope="row">リリース</th>
+			<th scope="row">Release</th>
 			<td>全てのバージョンがビルドされています。<br> <strong>安定しており、プロダクションで使えます</strong>。</td>
 		</tr>
 		<tr>
-			<th scope="row">カナリー</th>
+			<th scope="row">Canary</th>
 			<td>V8やその他の新機能が使える、毎晩ビルドされるバージョンです。</td>
 		</tr>
 		<tr>
@@ -179,8 +179,8 @@
 		<h2>NG (ネクストジェネレーション)</h2>
 
 		<ul>
-			<li>モダンな JavaScript のための新しいプラットフォーム。</li>
-			<li>無期限に下位互換性が残ります。</li>
+			<li>モダンな JavaScript アプリケーションのための新しいプラットフォームを目指します。</li>
+			<li>今後も下位互換性は残す予定です。</li>
 			<li>新しい API は古いモジュールと API を壊すことなく ES6/7 を中心に据えることができます。</li>
 			<li>現在のプラットフォームへの改善から今後の API のための作業への区切りとします。</li>
 		</ul>
@@ -203,7 +203,7 @@
 		-->
 		<h2>デバッグとトレーシング</h2>
 		<blockquote>
-			<p>コアはデバッグ及びトレースツールの巨大なエコシステムを実現するのではなく、<code>domains</code> のような高レベルの抽象化を支持する必要があります。</p>
+			<p>コアは <code>domains</code> のような高レベルの抽象化を目指すよりもむしろデバッグやトレースツールのような様々なエコシステムを利用可能にする必要があります。</p>
 		</blockquote>
 		<ul>
 			<li><code>trace_event</code> との統合 (V8 と Chrome のための新しいトレース API )。</li>
@@ -225,12 +225,12 @@
 		</ul>
 		<p class="note">Work being lead by the <a href="https://github.com/iojs/readable-stream">Streams Working Group</a>. Contributors welcome!</p>
 		-->
-		<h2>ストリーム</h2>
+		<h2>Stream</h2>
 		<ul>
 			<li><strong>ストリームワーキンググループ</strong>は <code>readable-stream</code> を引き継ぎ、これを io.js 公式の <code>stream</code> モジュールとしました。</li>
 			<li>全ての既存の互換性の問題を修正しました。</li>
       <li>ユーザエラーを回避するためにストリームの作成を簡素化します。</li>
-			<li><a href="https://github.com/whatwg/streams">WHATWG Streams</a>を探してインターフェースと互換性の問題を特定する。</li>
+			<li><a href="https://github.com/whatwg/streams">WHATWG Streams</a>を追求してインターフェースと互換性の問題を明確にする。</li>
 			<li>ストリームのパフォーマンスを向上させる。</li>
 		</ul>
 		<p class="note">作業は<a href="https://github.com/iojs/readable-stream">Streams Working Group</a> に先導されています。コントリビュート歓迎です！</p>
@@ -277,7 +277,7 @@
 		<h2>ローカライズ</h2>
 
 		<ul>
-			<li><code>icu</code> などの影響を軽減。(バイナリとメモリフットプリント)</li>
+			<li><code>icu</code> を含めた時の影響を軽減。(バイナリとメモリフットプリント)</li>
 			<li>活気のあるローカライゼーションコミュニティを育成する。</li>
 				<ul>
 					<li>各言語のコミュニティは自律的です。(30以上がこれまでに登録されています)</li>
